@@ -34,11 +34,11 @@ function TodoItem({todo, index, onChange}) {
                     type='checkbox' 
                     style={styles.input}
                     checked={todo.completed}
-                    onChange={() => onChange(todo.id)}
+                    onChange={() => onChange(todo)}
                 />
                 <strong>{index + 1}</strong>
                 &nbsp;
-                {todo.title}
+                {todo.task}
             </span>
             <button className='rm' onClick={removeTodo.bind(null, todo.id)}>&times;</button>
         </li>

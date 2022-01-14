@@ -1,0 +1,14 @@
+@media all and (min-width: 480px) {
+    .Signing {
+        padding: 60px 0;
+    }
+
+    .Signing form {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+    .Signing p {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+}

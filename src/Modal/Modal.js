@@ -2,6 +2,16 @@ import React from 'react'
 import './Modal.css'
 
 export default class Modal extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isShow: true,
+    };
+  }
+
+
   state = {
     isOpen: false
   }
@@ -10,16 +20,18 @@ export default class Modal extends React.Component {
     return (
       <React.Fragment>
         <button onClick={() => this.setState({ isOpen: true })}>
-          Open modal
+         Logout
         </button>
 
         {this.state.isOpen && (
           <div className='modal'>
             <div className='modal-body'>
-              <h1>Modal title</h1>
-              <p>I am awesome modal!</p>
-              <button onClick={() => this.setState({ isOpen: false })}>
-                Close modal
+              <h1>Do you really wanna logout???</h1>
+              <button onClick={() => {
+                this.setState({ isOpen: false })
+                this.props.setIsTodoListPage(false)
+              }}>
+                Yes, 100%!!!
               </button>
             </div>
           </div>
